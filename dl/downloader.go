@@ -61,6 +61,8 @@ func NewTask(output, url, filename string) (*Downloader, error) {
 	// If no filename is specified, default to main.ts
 	if filename == "" {
 		filename = mergeTSFilename
+	} else if filename[len(filename)-3:] != ".ts" {
+		filename += ".ts"
 	}
 
 	d := &Downloader{
