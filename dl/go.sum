@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231005606-d5ca78353c21 h1:CSjvPN4XNJk0L94s91PRRkB8O8WzIWylo16MCbJUHZA=
 github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231005606-d5ca78353c21/go.mod h1:OX/yE5Ny2d/NTI+YcqhQ4CBJ1h7m6FY/3kloGdWq9KQ=
-=======
-github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231003836-2f48bae42ae0 h1:7eZEdP/uZ1SIebWUyF/7IFG4H+25NViNSB15FLlu05g=
-github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231003836-2f48bae42ae0/go.mod h1:o9ANDw4epulUV4hSWuhkOR4+h94EZvrPq/Jmg/+Bik8=
 github.com/ArchieBVox/m3u8-downloader/tool v0.0.0-20241231003836-2f48bae42ae0 h1:Hw+SqHcMKva/mofTPxH4WbSgKqnc1EhKE4kd4OH0a9I=
 github.com/ArchieBVox/m3u8-downloader/tool v0.0.0-20241231003836-2f48bae42ae0/go.mod h1:JdEpb305idV5Ts0h6R0FhIwZY1biSdYFDjUI/gnNkdY=
-github.com/http-live-streaming/m3u8-downloader/tool v0.0.0-20210218104036-d0d4d45ee0bc h1:lNtOrlokXm/hsdbi3vj8rEiOoYLYjySLHltkIkBHRcE=
-github.com/http-live-streaming/m3u8-downloader/tool v0.0.0-20210218104036-d0d4d45ee0bc/go.mod h1:17W7niznuXZNRLx/LB5zHDf2v3ORA7xTD5a2Kf1BUYw=
-<<<<<<< HEAD
-=======
-golang.org/x/net v0.33.0 h1:74SYHlV8BIgHIFC/LrYkOGIwL19eTYXQ5wc6TBuO36I=
->>>>>>> 2b91c97 (Support proxies with SetClientProxy)
-golang.org/x/net v0.33.0/go.mod h1:HXLR5J+9DxmrqMwG9qjGCxZ+zKXxBru04zlTvWlWuN4=
->>>>>>> 1c4f870 (Use local copy of github.com/http-live-streaming/m3u8-downloader/tool)

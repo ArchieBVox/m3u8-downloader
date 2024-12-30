@@ -106,6 +106,7 @@ func (d *Downloader) Start(concurrency int) error {
 		limitChan <- struct{}{}
 	}
 	wg.Wait()
+	fmt.Println() // prevent the download %v/%v from being overwritten
 	if err := d.merge(); err != nil {
 		return err
 	}
@@ -119,8 +120,8 @@ func (d *Downloader) download(segIndex int) error {
 	if e != nil {
 		return fmt.Errorf("request %s, %s", tsUrl, e.Error())
 	}
-	//noinspection GoUnhandledErrorResult
 	defer b.Close()
+
 	fPath := filepath.Join(d.tsFolder, tsFilename)
 	fTemp := fPath + tsTempFileSuffix
 	f, err := os.Create(fTemp)
@@ -143,6 +144,7 @@ func (d *Downloader) download(segIndex int) error {
 			return fmt.Errorf("decryt: %s, %s", tsUrl, err.Error())
 		}
 	}
+
 	// https://en.wikipedia.org/wiki/MPEG_transport_stream
 	// Some TS files do not start with SyncByte 0x47, they can not be played after merging,
 	// Need to remove the bytes before the SyncByte 0x47(71).
@@ -166,7 +168,7 @@ func (d *Downloader) download(segIndex int) error {
 	// Maybe it will be safer in this way...
 	atomic.AddInt32(&d.finish, 1)
 	//tool.DrawProgressBar("Downloading", float32(d.finish)/float32(d.segLen), progressWidth)
-	fmt.Printf("[download %6.2f%%] %s\n", float32(d.finish)/float32(d.segLen)*100, tsUrl)
+	fmt.Printf("\r[download %v/%v]", d.finish, d.segLen)
 	return nil
 }
 
