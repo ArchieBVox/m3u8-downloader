@@ -87,7 +87,7 @@ func (d *Downloader) Start(concurrency int) error {
 				// Back into the queue, retry request
 				fmt.Printf("[failed] %s\n", err.Error())
 				if err := d.back(idx); err != nil {
-					fmt.Printf(err.Error())
+					fmt.Println(err.Error())
 				}
 			}
 			<-limitChan
