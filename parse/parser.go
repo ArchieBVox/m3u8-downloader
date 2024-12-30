@@ -3,7 +3,7 @@ package parse
 import (
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/url"
 
 	"github.com/http-live-streaming/m3u8-downloader/tool"
@@ -25,7 +25,7 @@ func FromURL(link string) (*Result, error) {
 	if err != nil {
 		return nil, fmt.Errorf("request m3u8 URL failed: %s", err.Error())
 	}
-	//noinspection GoUnhandledErrorResult
+
 	defer body.Close()
 	m3u8, err := parse(body)
 	if err != nil {
@@ -56,11 +56,12 @@ func FromURL(link string) (*Result, error) {
 			if err != nil {
 				return nil, fmt.Errorf("extract key failed: %s", err.Error())
 			}
-			keyByte, err := ioutil.ReadAll(resp)
-			_ = resp.Close()
+			keyByte, err := io.ReadAll(resp)
 			if err != nil {
 				return nil, err
 			}
+			_ = resp.Close()
+
 			fmt.Println("decryption key: ", string(keyByte))
 			result.Keys[idx] = string(keyByte)
 		default:

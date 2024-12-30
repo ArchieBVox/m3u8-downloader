@@ -89,7 +89,7 @@ func parse(reader io.Reader) (*M3u8, error) {
 	for ; i < count; i++ {
 		line := strings.TrimSpace(lines[i])
 		if i == 0 {
-			if "#EXTM3U" != line {
+			if line != "#EXTM3U" {
 				return nil, fmt.Errorf("invalid m3u8, missing #EXTM3U in line 1")
 			}
 			continue

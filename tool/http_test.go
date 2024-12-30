@@ -1,7 +1,7 @@
 package tool
 
 import (
-	"io/ioutil"
+	"io"
 	"testing"
 )
 
@@ -11,7 +11,7 @@ func TestGet(t *testing.T) {
 		t.Error(err)
 	}
 	defer body.Close()
-	_, err = ioutil.ReadAll(body)
+	_, err = io.ReadAll(body)
 	if err != nil {
 		t.Error(err)
 	}

@@ -3,7 +3,7 @@ package dl
 import (
 	"bufio"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -116,7 +116,7 @@ func (d *Downloader) download(segIndex int) error {
 	if err != nil {
 		return fmt.Errorf("create file: %s, %s", tsFilename, err.Error())
 	}
-	bytes, err := ioutil.ReadAll(b)
+	bytes, err := io.ReadAll(b)
 	if err != nil {
 		return fmt.Errorf("read bytes: %s, %s", tsUrl, err.Error())
 	}
@@ -207,18 +207,22 @@ func (d *Downloader) merge() error {
 	if err != nil {
 		return fmt.Errorf("create main TS file failed：%s", err.Error())
 	}
-	//noinspection GoUnhandledErrorResult
 	defer mFile.Close()
 
 	writer := bufio.NewWriter(mFile)
 	mergedCount := 0
 	for segIndex := 0; segIndex < d.segLen; segIndex++ {
 		tsFilename := tsFilename(segIndex)
-		bytes, err := ioutil.ReadFile(filepath.Join(d.tsFolder, tsFilename))
+		bytes, err := os.ReadFile(filepath.Join(d.tsFolder, tsFilename))
+		if err != nil {
+			return fmt.Errorf("%v", err.Error())
+		}
+
 		_, err = writer.Write(bytes)
 		if err != nil {
 			continue
 		}
+
 		mergedCount++
 		tool.DrawProgressBar("merge",
 			float32(mergedCount)/float32(d.segLen), progressWidth)
