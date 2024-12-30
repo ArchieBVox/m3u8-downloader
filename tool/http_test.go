@@ -11,6 +11,7 @@ func TestGet(t *testing.T) {
 		t.Error(err)
 	}
 	defer body.Close()
+
 	_, err = io.ReadAll(body)
 	if err != nil {
 		t.Error(err)
