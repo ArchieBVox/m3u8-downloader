@@ -1,4 +1,4 @@
-module github.com/http-live-streaming/m3u8-downloader/dl
+module github.com/ArchieBVox/m3u8-downloader/dl
 
 go 1.20
 
