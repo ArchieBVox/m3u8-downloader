@@ -19,3 +19,5 @@
 .idea
 m3u8
 /test
+
+downloader_test.go
