@@ -1,6 +1,4 @@
-github.com/ArchieBVox/m3u8-downloader/dl v0.0.0-20241231002227-19f57f2669c0 h1:dMJh5WnY0y6BfDO6KXYNR0xK/PqwTQ4f75wazvT5b+M=
-github.com/ArchieBVox/m3u8-downloader/dl v0.0.0-20241231002227-19f57f2669c0/go.mod h1:2EHWJvQP1ZqnPHqr5coa/BuaA457BH2np5G75NbGj8g=
-github.com/http-live-streaming/m3u8-downloader/parse v0.0.0-20210218104036-d0d4d45ee0bc h1:pAa/zh5iAqmM1nd/Vg92vlNp3eF9EbFr+lNVTAkDOPs=
-github.com/http-live-streaming/m3u8-downloader/parse v0.0.0-20210218104036-d0d4d45ee0bc/go.mod h1:w4oN3vWhcI2wudbruLkcbebnADCMMXq7KVMPV+fSB2c=
-github.com/http-live-streaming/m3u8-downloader/tool v0.0.0-20210218104036-d0d4d45ee0bc h1:lNtOrlokXm/hsdbi3vj8rEiOoYLYjySLHltkIkBHRcE=
-github.com/http-live-streaming/m3u8-downloader/tool v0.0.0-20210218104036-d0d4d45ee0bc/go.mod h1:17W7niznuXZNRLx/LB5zHDf2v3ORA7xTD5a2Kf1BUYw=
+github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231005606-d5ca78353c21 h1:CSjvPN4XNJk0L94s91PRRkB8O8WzIWylo16MCbJUHZA=
+github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231005606-d5ca78353c21/go.mod h1:OX/yE5Ny2d/NTI+YcqhQ4CBJ1h7m6FY/3kloGdWq9KQ=
+github.com/ArchieBVox/m3u8-downloader/tool v0.0.0-20241231003836-2f48bae42ae0 h1:Hw+SqHcMKva/mofTPxH4WbSgKqnc1EhKE4kd4OH0a9I=
+github.com/ArchieBVox/m3u8-downloader/tool v0.0.0-20241231003836-2f48bae42ae0/go.mod h1:JdEpb305idV5Ts0h6R0FhIwZY1biSdYFDjUI/gnNkdY=
