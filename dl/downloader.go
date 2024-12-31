@@ -10,8 +10,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/http-live-streaming/m3u8-downloader/parse"
-	"github.com/http-live-streaming/m3u8-downloader/tool"
+	"github.com/ArchieBVox/m3u8-downloader/parse"
+	"github.com/ArchieBVox/m3u8-downloader/tool"
 )
 
 const (

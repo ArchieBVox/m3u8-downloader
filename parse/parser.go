@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/url"
 
-	"github.com/http-live-streaming/m3u8-downloader/tool"
+	"github.com/ArchieBVox/m3u8-downloader/tool"
 )
 
 type Result struct {
