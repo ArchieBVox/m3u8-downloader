@@ -1,4 +1,4 @@
 github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231005606-d5ca78353c21 h1:CSjvPN4XNJk0L94s91PRRkB8O8WzIWylo16MCbJUHZA=
 github.com/ArchieBVox/m3u8-downloader/parse v0.0.0-20241231005606-d5ca78353c21/go.mod h1:OX/yE5Ny2d/NTI+YcqhQ4CBJ1h7m6FY/3kloGdWq9KQ=
-github.com/ArchieBVox/m3u8-downloader/tool v0.0.0-20241231003836-2f48bae42ae0 h1:Hw+SqHcMKva/mofTPxH4WbSgKqnc1EhKE4kd4OH0a9I=
-github.com/ArchieBVox/m3u8-downloader/tool v0.0.0-20241231003836-2f48bae42ae0/go.mod h1:JdEpb305idV5Ts0h6R0FhIwZY1biSdYFDjUI/gnNkdY=
+golang.org/x/net v0.33.0 h1:74SYHlV8BIgHIFC/LrYkOGIwL19eTYXQ5wc6TBuO36I=
+golang.org/x/net v0.33.0/go.mod h1:HXLR5J+9DxmrqMwG9qjGCxZ+zKXxBru04zlTvWlWuN4=
