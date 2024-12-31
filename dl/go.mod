@@ -7,4 +7,6 @@ require (
 	github.com/ArchieBVox/m3u8-downloader/tool v0.0.0-20241231003836-2f48bae42ae0
 )
 
-replace github.com/http-live-streaming/m3u8-downloader/tool => ../tool
+require golang.org/x/net v0.33.0 // indirect
+
+replace github.com/ArchieBVox/m3u8-downloader/tool => ../tool
